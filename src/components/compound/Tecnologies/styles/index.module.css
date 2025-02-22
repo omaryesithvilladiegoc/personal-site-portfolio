@@ -1,7 +1,4 @@
-:root {
-    --cardColorFont: #beddff;
-    --cardColorFontVariant: #beddff;
-}
+
 
 /* Grid Tecnology */
 .tecnologiesGrid {
@@ -24,7 +21,7 @@
     max-height: 30rem;
     border-radius: 1rem;
     overflow: hidden;
-    color: var(--cardColorFont);
+    color:#beddff;
     cursor: pointer;
     padding: 2rem;
     justify-content: space-around;
@@ -33,7 +30,7 @@
 .tecnologyCard h4 {
    
     z-index: 1;
-    color: var(--cardColorFont);
+    color: #beddff;
    
 }
 
