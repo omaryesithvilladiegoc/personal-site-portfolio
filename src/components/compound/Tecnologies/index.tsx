@@ -49,13 +49,15 @@ FilterableTecnologies.SearchBar = function SearchBar({
           </p>
         </section>
 
-        <input
-          className={styles.inputTecnology}
-          type="text"
-          value={filterWord}
-          placeholder="click para buscar tecnología..."
-          onChange={(e) => setFilterWord(e.target.value)}
-        />
+        <div className={styles.contentInput}>
+          <input
+            className={styles.inputTecnology}
+            type="text"
+            value={filterWord}
+            placeholder="click para buscar tecnología..."
+            onChange={(e) => setFilterWord(e.target.value)}
+          />
+        </div>
       </form>
       {showButtonMoreTecnologies && (
         <div className={styles.showMoreTecnologies}>

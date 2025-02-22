@@ -1,5 +1,4 @@
 "use client";
-import NavBar from "@/components/compound/NavBar";
 
 const Header = () => {
   return (
@@ -15,15 +14,6 @@ const Header = () => {
         alignItems: "center",
       }}
     >
-      <NavBar
-        content={{
-          ButtonAbout: "Sobre mí",
-          ButtonRegister: "Registrate",
-        }}
-      >
-        <NavBar.ButtonAbout />
-        <NavBar.ButtonRegister />
-      </NavBar>
       <div
         style={{
           display: "flex",
