@@ -1,13 +1,13 @@
 import React from "react";
-import { Tecnology } from "../types";
+import { Technology } from "../types";
 
 export interface Props {
   children: React.ReactNode;
-  tecnologies: Tecnology[];
+  tecnologies: Technology[];
 }
 
-export interface IFilterableTecnologies {
+export interface IFilterableTechnologies {
   filterWord: string;
   setFilterWord: React.Dispatch<React.SetStateAction<string>>;
-  tecnologies: Tecnology[];
+  tecnologies: Technology[];
 }

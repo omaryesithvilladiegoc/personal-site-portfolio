@@ -1,9 +1,13 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import styles from "../../styles/index.module.css";
-import { Tecnology } from "../../types";
+import { Technology } from "../../types";
 
-export default function TecnologyCard({ tecnology }: { tecnology: Tecnology }) {
+export default function TechnologyCard({
+  tecnology,
+}: {
+  tecnology: Technology;
+}) {
   return (
     <motion.div
       initial={{ x: -20, opacity: 0 }}

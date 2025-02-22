@@ -1,5 +1,5 @@
 "use client";
-import FilterableTecnologies from "@/components/compound/Tecnologies";
+import FilterableTecnologies from "@/components/compound/Technologies";
 import { tecnologias_favoritas } from "@/data/tecnologias";
 import React from "react";
 

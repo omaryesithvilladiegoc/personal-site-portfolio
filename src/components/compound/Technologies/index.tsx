@@ -6,11 +6,11 @@ import { Props } from "./interfaces";
 import { MdOutlineNavigateBefore } from "react-icons/md";
 
 import {
-  FilterableTecnologiesContext,
-  useContextFilterableTecnologies,
+  FilterableTechnologiesContext,
+  useContextFilterableTechnologies,
 } from "./context";
 import Link from "next/link";
-import TecnologyCard from "./childs/TecnologyCard";
+import TecnologyCard from "./childs/TechnologyCard";
 
 function FilterableTecnologies({
   tecnologies,
@@ -19,11 +19,11 @@ function FilterableTecnologies({
   const [filterWord, setFilterWord] = useState<string>("");
 
   return (
-    <FilterableTecnologiesContext.Provider
+    <FilterableTechnologiesContext.Provider
       value={{ filterWord, setFilterWord, tecnologies }}
     >
       {children}
-    </FilterableTecnologiesContext.Provider>
+    </FilterableTechnologiesContext.Provider>
   );
 }
 
@@ -34,7 +34,7 @@ FilterableTecnologies.SearchBar = function SearchBar({
   showButtonMoreTecnologies?: boolean;
   showButtonBack?: boolean;
 }) {
-  const { filterWord, setFilterWord } = useContextFilterableTecnologies();
+  const { filterWord, setFilterWord } = useContextFilterableTechnologies();
 
   return (
     <section>
@@ -80,7 +80,7 @@ FilterableTecnologies.TecnologiesGrid = function TecnologiesGrid({
 }: {
   numberOfDataRender?: number;
 }) {
-  const { filterWord, tecnologies } = useContextFilterableTecnologies();
+  const { filterWord, tecnologies } = useContextFilterableTechnologies();
   const filteredTecnologies = tecnologies.filter((tec) =>
     tec.nombre.toLowerCase().includes(filterWord.toLowerCase())
   );

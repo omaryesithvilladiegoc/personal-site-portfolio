@@ -1,4 +1,4 @@
-export type Tecnology = {
+export type Technology = {
   nombre: string;
   imgUrl: string;
   descripcion: string;

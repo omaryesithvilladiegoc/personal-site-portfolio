@@ -1,6 +1,6 @@
 "use client";
 import Header from "@/components/common/Header";
-import FilterableTecnologiesTable from "@/components/compound/Tecnologies";
+import FilterableTecnologiesTable from "@/components/compound/Technologies";
 import { tecnologias_favoritas } from "@/data/tecnologias";
 
 export default function Home() {
