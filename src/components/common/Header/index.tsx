@@ -16,13 +16,20 @@ const Header = () => {
     >
       <div
         style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "80%",
+          width: "100%",
+          margin: "0 auto",
         }}
       >
-        <div>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "0 auto",
+          }}
+        >
           <h2
             style={{
               color: "#7c8aa8",
