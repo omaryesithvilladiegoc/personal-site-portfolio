@@ -47,6 +47,7 @@ const Header = () => {
               fontSize: "28px",
               display: "flex",
               flexDirection: "column",
+              textAlign: "center",
             }}
           >
             Desarrollador Web
