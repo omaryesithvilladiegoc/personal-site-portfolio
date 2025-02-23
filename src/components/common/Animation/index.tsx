@@ -20,16 +20,17 @@ const VideoComponent: React.FC = () => {
   }, []);
 
   return (
-    <video
-      ref={videoRef}
-      className={styles.myVideo}
-      width={"100%"}
-      src="/assets/856148-hd_1920_1080_25fps.mp4"
-      height={"100%"}
-      muted
-    >
-      Tu navegador no soporta la etiqueta de video.
-    </video>
+    <div style={{ overflow: "hidden" }}>
+      <video
+        ref={videoRef}
+        className={styles.myVideo}
+        width={"100%"}
+        src="/assets/856148-hd_1920_1080_25fps.mp4"
+        muted
+      >
+        Tu navegador no soporta la etiqueta de video.
+      </video>
+    </div>
   );
 };
 

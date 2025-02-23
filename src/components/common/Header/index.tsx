@@ -36,6 +36,7 @@ const Header = () => {
               fontSize: "4rem",
               display: "flex",
               flexDirection: "column",
+              textAlign: "center",
             }}
           >
             Omar Villadiego{" "}
