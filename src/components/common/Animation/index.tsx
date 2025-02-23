@@ -6,16 +6,19 @@ const VideoComponent: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const position = document.documentElement.scrollTop;
+      const position =
+        document.documentElement.scrollTop || document.body.scrollTop;
       if (videoRef.current) {
         videoRef.current.currentTime = position / 500;
       }
     };
 
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("touchmove", handleScroll); // Agregado para dispositivos móviles
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("touchmove", handleScroll); // Limpiar el evento para dispositivos móviles
     };
   }, []);
 
