@@ -1,17 +1,17 @@
 "use client";
-import { Montserrat, Rubik } from "next/font/google";
 import "./globals.css";
 import "./reset.css";
 import "./normalize.css";
 import VideoComponent from "@/components/common/Animation";
+import { Geist, Geist_Mono } from "next/font/google";
 
-export const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-export const rubik = Rubik({
-  variable: "--font-rubik",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${geistMono.className} ${geistSans.className}`}>
         <VideoComponent />
         {children}
       </body>

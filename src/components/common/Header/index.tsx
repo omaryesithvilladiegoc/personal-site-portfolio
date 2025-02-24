@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "motion/react";
 import styles from "./styles/header.module.css";
-import { rubik } from "@/app/layout";
 
 const motionStyles = {
   initial: { y: 40, opacity: 0 },
@@ -15,16 +14,10 @@ const Header = () => {
     <section className={styles.headerSection}>
       <div className={styles.headerContainer}>
         <div className={styles.headerContent}>
-          <motion.h2
-            {...motionStyles}
-            className={`${styles.title} ${rubik.className}`}
-          >
+          <motion.h2 {...motionStyles} className={`${styles.title}`}>
             Omar Villadiego{" "}
           </motion.h2>
-          <motion.h1
-            {...motionStyles}
-            className={`${rubik.className} ${styles.subtitle}`}
-          >
+          <motion.h1 {...motionStyles} className={`${styles.subtitle}`}>
             Desarrollador Web Node Js
           </motion.h1>
         </div>
