@@ -1,66 +1,33 @@
 "use client";
+import { motion } from "motion/react";
+import styles from "./styles/header.module.css";
+import { rubik } from "@/app/layout";
+
+const motionStyles = {
+  initial: { y: 40, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  exit: { y: 40, opacity: 0 },
+  transition: { duration: 0.5 },
+};
 
 const Header = () => {
   return (
-    <section
-      style={{
-        height: "100vh",
-        position: "relative",
-        overflow: "visible",
-        width: "100%",
-        margin: "0 auto",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            margin: "0 auto",
-          }}
-        >
-          <h2
-            style={{
-              color: "#7c8aa8",
-              fontSize: "4rem",
-              display: "flex",
-              flexDirection: "column",
-              textAlign: "center",
-            }}
+    <section className={styles.headerSection}>
+      <div className={styles.headerContainer}>
+        <div className={styles.headerContent}>
+          <motion.h2
+            {...motionStyles}
+            className={`${styles.title} ${rubik.className}`}
           >
             Omar Villadiego{" "}
-          </h2>
-          <h1
-            style={{
-              color: "#7c8aa2",
-              fontSize: "28px",
-              display: "flex",
-              flexDirection: "column",
-              textAlign: "center",
-            }}
+          </motion.h2>
+          <motion.h1
+            {...motionStyles}
+            className={`${rubik.className} ${styles.subtitle}`}
           >
-            Desarrollador Web
-            <span>Node JS - Full Stack</span>
-          </h1>
+            Desarrollador Web Node Js
+          </motion.h1>
         </div>
-        <div
-          style={{
-            width: "50%",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        ></div>
       </div>
     </section>
   );

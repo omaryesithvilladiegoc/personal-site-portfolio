@@ -27,7 +27,7 @@ const VideoComponent: React.FC = () => {
       <video
         ref={videoRef}
         className={styles.myVideo}
-        width={"100%"}
+        width={"90%"}
         src="/assets/856148-hd_1920_1080_25fps.mp4"
         muted
       >

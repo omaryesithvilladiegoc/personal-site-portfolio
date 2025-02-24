@@ -10,9 +10,9 @@ export default function TechnologyCard({
 }) {
   return (
     <motion.div
-      initial={{ x: -20, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      exit={{ x: 20, opacity: 0 }}
+      initial={{ y: 40, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      exit={{ y: 40, opacity: 0 }}
       transition={{ duration: 0.5 }}
       className={styles.tecnologyCard}
     >
@@ -28,8 +28,8 @@ export default function TechnologyCard({
             loading="lazy"
             alt={`Logo de ${tecnology.nombre}`}
             width={500}
-            height={300}
-            style={{ width: "100%", height: "auto" }}
+            height={100}
+            style={{ width: "60%", height: "auto", margin: "0 auto" }}
             priority={false}
           />
         </div>

@@ -4,7 +4,7 @@ import styles from "./styles/index.module.css";
 import { MdNavigateNext } from "react-icons/md";
 import { Props } from "./interfaces";
 import { MdOutlineNavigateBefore } from "react-icons/md";
-
+import { motion } from "motion/react";
 import {
   FilterableTechnologiesContext,
   useContextFilterableTechnologies,
@@ -27,6 +27,13 @@ function FilterableTecnologies({
   );
 }
 
+const motionStyles = {
+  initial: { y: "9rem", opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  exit: { y: 40, opacity: 0 },
+  transition: { duration: 0.5 },
+};
+
 FilterableTecnologies.SearchBar = function SearchBar({
   showButtonMoreTecnologies = false,
   showButtonBack,
@@ -40,16 +47,18 @@ FilterableTecnologies.SearchBar = function SearchBar({
     <section>
       <form className={styles.formTecnologies}>
         <section className={styles.descriptionContent}>
-          <h2>Descubre mis tecnologías favoritas</h2>
-          <p>
+          <motion.h2 {...motionStyles}>
+            Descubre mis tecnologías favoritas
+          </motion.h2>
+          <motion.p {...motionStyles}>
             A lo largo de mi trayectoria, he aprendido tecnologías que me
             permiten evolucionar y ampliar mis conocimientos en el desarrollo
             web, descubre entre tecnologías de{" "}
             <strong>frontend, backend, herramientas, lenguajes</strong>
-          </p>
+          </motion.p>
         </section>
 
-        <div className={styles.contentInput}>
+        <motion.div {...motionStyles} className={styles.contentInput}>
           <input
             className={styles.inputTecnology}
             type="text"
@@ -57,13 +66,13 @@ FilterableTecnologies.SearchBar = function SearchBar({
             placeholder="click para buscar tecnología..."
             onChange={(e) => setFilterWord(e.target.value)}
           />
-        </div>
+        </motion.div>
       </form>
       {showButtonMoreTecnologies && (
-        <div className={styles.showMoreTecnologies}>
+        <motion.div className={styles.showMoreTecnologies}>
           <a href="/tecnologies">Ver más tecnologías</a>
           <MdNavigateNext />
-        </div>
+        </motion.div>
       )}
       {showButtonBack && (
         <div className={styles.showButtonBack}>
@@ -76,7 +85,7 @@ FilterableTecnologies.SearchBar = function SearchBar({
 };
 
 FilterableTecnologies.TecnologiesGrid = function TecnologiesGrid({
-  numberOfDataRender = 5,
+  numberOfDataRender = 4,
 }: {
   numberOfDataRender?: number;
 }) {
