@@ -1,6 +1,4 @@
 export type options = {
-  ButtonAbout?: string;
-  ButtonSkills?: string;
+  ButtonGitHubSource?: string;
   ButtonRegister?: string;
-  ButtonContact?: string;
 };

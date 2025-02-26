@@ -1,0 +1,119 @@
+.container {
+    display: flex;
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+    
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+} 
+
+.titleGeneral {
+    font-size: 4rem;
+    color: #95aad6;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.containerText {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    height: 17rem;
+    
+}
+.container p {
+    color: #95aad6;
+    display: flex;
+    width: 70%;
+    position: relative;
+    }
+
+/** Card Container Projects **/
+
+.cardsContainer {
+    width: 95%;
+    display: grid;
+    gap: 10rem;
+    justify-content: center;
+    grid-auto-rows: 20rem;
+    grid-auto-flow: dense;
+}
+
+
+.containerCard {
+    background-color: #95aad674;
+    border-radius: 30px;
+    height: 90%;
+    overflow: hidden;
+}
+
+
+@media (min-width:900px) {
+    .feature {
+        grid-column: span 2;
+    }
+
+  
+}
+
+@media (max-width:900px) {
+    .containerText {
+        height: 25rem;
+    }
+  
+}
+
+
+
+/** projects section tittle **/
+
+.contentHeaderProject {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    
+}
+
+.contentHeaderProject h2 {
+    color: #95aad6;
+    font-size: 2.5rem;
+}
+
+/* button my github */
+
+
+.containerText a {
+    display: flex;
+    gap: 1rem;
+    color: #8593b0;
+    background-color: transparent;
+    border: none;
+    transition: gap ease .3s;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 25%;
+    text-decoration: none;
+    overflow: hidden;
+
+}
+
+.containerText a:hover {
+    gap: 4rem;
+}
+

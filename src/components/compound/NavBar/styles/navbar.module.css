@@ -1,11 +1,9 @@
 .navBar {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 10px;
     width: 100%;
+    position: absolute;
+    top: 30;
+    height: 100%;
     z-index: 1;
 }
 .navBarContent {
@@ -13,25 +11,40 @@
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     gap: 4dvw;
-    height: 3rem;
+    height: 3.8rem;
+    align-items: center;
+    width: 88%;
+    margin: 0 auto;
     
 }
 
-.navBarContent li {
-    background-color: #cfd4dd;
-    padding: .5rem;
+
+
+.listStyle {
     border-radius: 50px;
-    box-shadow: 1px 1px 1px #5d6a83;
+    padding: .8rem;
     transition: all ease .5s;
     cursor: pointer;
-    color: #5d6a83;
+    color: hsl(218, 17%, 69%);
     font-weight: bold;
+    display: flex;
+    border-bottom: 1px solid rgb(119, 116, 171); 
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-size: 13px;
+   
+}
+.navBarContent  a {
+    text-decoration: none;
+    color: inherit; 
 }
 
+
 .navBarContent li:hover {
-    box-shadow: 5px 5px 5px #5d6a83;
+    box-shadow: 3px 3px 3px #5d6a83;
    
 }
